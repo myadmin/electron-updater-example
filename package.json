@@ -1,11 +1,12 @@
 {
   "name": "electron-updater-example",
-  "version": "0.8.1",
+  "version": "0.8.4",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
-    "publish": "electron-builder -p always"
+    "publish": "electron-builder -p always",
+    "start": "electron ."
   },
   "devDependencies": {
     "electron": "^14.0.1",
@@ -26,7 +27,8 @@
       "target": "nsis"
     },
     "nsis": {
-      "oneClick": false
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     },
     "linux": {
       "category": "your.app.category.type",
